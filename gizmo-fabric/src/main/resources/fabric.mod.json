@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "gizmo",
+  "version": "${version}",
+  "name": "Gizmo",
+  "description": "Gizmo utility library",
+  "authors": [
+    "56738"
+  ],
+  "contact": {
+    "sources": "https://github.com/56738/gizmo-modded"
+  },
+  "license": "GPL-3.0-or-later",
+  "environment": "*",
+  "accessWidener": "gizmo.accesswidener",
+  "entrypoints": {
+    "main": [
+      "me.m56738.gizmo.fabric.GizmoMod"
+    ],
+    "client": [
+      "me.m56738.gizmo.fabric.GizmoModClient"
+    ]
+  },
+  "mixins": [
+    "gizmo.mixins.json",
+    {
+      "config": "gizmo.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.7",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": [
+        "library"
+      ]
+    }
+  }
+}

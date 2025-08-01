@@ -1,0 +1,24 @@
+license = "GNU GPLv3"
+issueTrackerURL = "https://github.com/56738/gizmo-modded/issues"
+
+[[mods]]
+modId = "gizmo"
+version = "${version}"
+displayName = "Gizmo"
+displayURL = "https://github.com/56738/gizmo-modded"
+authors = "56738"
+description = '''Gizmo utility library'''
+
+[[dependencies.gizmo]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforgeVersion},)" #mandatory
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.gizmo]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraftVersion}"
+ordering = "NONE"
+side = "BOTH"
