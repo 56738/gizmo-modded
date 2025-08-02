@@ -24,6 +24,7 @@ dependencies {
 tasks {
     jar {
         manifest {
+            attributes["Automatic-Module-Name"] = "me.m56738.gizmo.modded"
             attributes["FMLModType"] = "GAMELIBRARY"
         }
     }

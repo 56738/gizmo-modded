@@ -49,6 +49,9 @@ sourceSets {
 
 tasks {
     jar {
+        manifest {
+            attributes["Automatic-Module-Name"] = "me.m56738.gizmo.neoforge"
+        }
         from(configurations.accessTransformers) {
             rename { "META-INF/accesstransformer.cfg" }
         }
