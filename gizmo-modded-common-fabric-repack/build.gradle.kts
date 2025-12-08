@@ -11,7 +11,7 @@ dependencies {
         parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.mappings.get()}@zip")
     })
     compileOnly(libs.fabric.loader)
-    bundle(project(":gizmo-modded"))
+    bundle(project(":gizmo-modded-common"))
 }
 
 tasks {

@@ -10,12 +10,12 @@ dependencies {
         parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.mappings.get()}@zip")
     })
 
-    implementation(project(":gizmo-modded"))
+    implementation(project(":gizmo-modded-common"))
 
     modImplementation(libs.fabric.loader)
     modImplementation(libs.fabric.api)
 
-    include(project(":gizmo-modded-loom"))
+    include(project(":gizmo-modded-common-fabric-repack"))
     include(libs.gizmo.common)
 }
 
