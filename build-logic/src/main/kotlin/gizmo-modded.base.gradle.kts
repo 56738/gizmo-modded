@@ -4,7 +4,6 @@ plugins {
 }
 
 repositories {
-    maven("https://repo.papermc.io/repository/maven-public")
     maven("https://repo.56738.me")
 }
 
@@ -18,7 +17,7 @@ java {
     withJavadocJar()
     withSourcesJar()
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 

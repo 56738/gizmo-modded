@@ -5,17 +5,13 @@ plugins {
 
 dependencies {
     minecraft(libs.minecraft)
-    mappings(@Suppress("UnstableApiUsage") loom.layered {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${libs.versions.parchment.minecraft.get()}:${libs.versions.parchment.mappings.get()}@zip")
-    })
 
     implementation(project(":gizmo-modded-common"))
 
-    modImplementation(libs.fabric.loader)
-    modImplementation(libs.fabric.api)
+    implementation(libs.fabric.loader)
+    implementation(libs.fabric.api)
 
-    include(project(":gizmo-modded-common-fabric-repack"))
+    include(project(":gizmo-modded-common"))
     include(libs.gizmo.common)
 }
 

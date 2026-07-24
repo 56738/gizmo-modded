@@ -8,10 +8,6 @@ neoForge {
     enable {
         neoFormVersion = libs.versions.neoform.get()
     }
-    parchment {
-        minecraftVersion = libs.versions.parchment.minecraft
-        mappingsVersion = libs.versions.parchment.mappings
-    }
     accessTransformers {
         publish(file("src/main/resources/META-INF/accesstransformer.cfg"))
     }

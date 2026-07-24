@@ -11,5 +11,4 @@ pluginManagement {
 
 include("gizmo-fabric")
 include("gizmo-modded-common")
-include("gizmo-modded-common-fabric-repack")
 include("gizmo-neoforge")

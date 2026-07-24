@@ -7,10 +7,6 @@ neoForge {
     enable {
         version = libs.versions.neoforge.get()
     }
-    parchment {
-        minecraftVersion = libs.versions.parchment.minecraft
-        mappingsVersion = libs.versions.parchment.mappings
-    }
     mods {
         register("gizmo") {
             sourceSet(sourceSets["main"])

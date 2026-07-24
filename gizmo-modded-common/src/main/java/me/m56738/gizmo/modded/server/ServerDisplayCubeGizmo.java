@@ -12,6 +12,7 @@ import net.minecraft.util.Brightness;
 import net.minecraft.world.entity.Display.BillboardConstraints;
 import net.minecraft.world.entity.Display.BlockDisplay;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.ApiStatus;
@@ -30,13 +31,13 @@ public class ServerDisplayCubeGizmo extends AbstractCubeGizmo implements ServerE
     private static final Map<GizmoColor, BlockState> COLORS = new HashMap<>();
 
     static {
-        COLORS.put(GizmoColor.WHITE, Blocks.WHITE_CONCRETE.defaultBlockState());
-        COLORS.put(GizmoColor.RED, Blocks.RED_CONCRETE.defaultBlockState());
-        COLORS.put(GizmoColor.GREEN, Blocks.LIME_CONCRETE.defaultBlockState());
-        COLORS.put(GizmoColor.BLUE, Blocks.BLUE_CONCRETE.defaultBlockState());
-        COLORS.put(GizmoColor.YELLOW, Blocks.YELLOW_CONCRETE.defaultBlockState());
-        COLORS.put(GizmoColor.GRAY, Blocks.LIGHT_GRAY_CONCRETE.defaultBlockState());
-        COLORS.put(GizmoColor.AQUA, Blocks.LIGHT_BLUE_CONCRETE.defaultBlockState());
+        COLORS.put(GizmoColor.WHITE, Blocks.CONCRETE.white().defaultBlockState());
+        COLORS.put(GizmoColor.RED, Blocks.CONCRETE.red().defaultBlockState());
+        COLORS.put(GizmoColor.GREEN, Blocks.CONCRETE.lime().defaultBlockState());
+        COLORS.put(GizmoColor.BLUE, Blocks.CONCRETE.blue().defaultBlockState());
+        COLORS.put(GizmoColor.YELLOW, Blocks.CONCRETE.yellow().defaultBlockState());
+        COLORS.put(GizmoColor.GRAY, Blocks.CONCRETE.lightGray().defaultBlockState());
+        COLORS.put(GizmoColor.AQUA, Blocks.CONCRETE.lightBlue().defaultBlockState());
     }
 
     private final ServerPlayer viewer;
@@ -53,7 +54,7 @@ public class ServerDisplayCubeGizmo extends AbstractCubeGizmo implements ServerE
             return;
         }
         ServerLevel level = viewer.level();
-        EntityType<BlockDisplay> type = EntityType.BLOCK_DISPLAY;
+        EntityType<BlockDisplay> type = EntityTypes.BLOCK_DISPLAY;
         entity = new BlockDisplay(type, level);
         configure(entity);
         update(entity);
