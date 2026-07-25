@@ -5,6 +5,9 @@ plugins {
 
 repositories {
     maven("https://repo.56738.me")
+    maven("https://maven.fabricmc.net")
+    maven("https://maven.neoforged.net/releases/")
+    mavenCentral()
 }
 
 tasks {
