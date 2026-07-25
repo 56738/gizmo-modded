@@ -8,16 +8,18 @@ import org.jetbrains.annotations.NotNull;
 
 @ApiStatus.Internal
 @SuppressWarnings("UnstableApiUsage")
-public class ServerGizmoFactory implements CubeGizmoFactory {
+public abstract class ServerGizmoFactory implements CubeGizmoFactory {
     private final @NotNull ServerPlayer player;
 
     public ServerGizmoFactory(@NotNull ServerPlayer player) {
         this.player = player;
     }
 
+    protected abstract @NotNull CubeGizmo createCube(@NotNull ServerPlayer player);
+
     @Override
     public @NotNull CubeGizmo createCube() {
-        return new ServerDisplayCubeGizmo(player);
+        return createCube(player);
     }
 
     @Override

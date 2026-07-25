@@ -44,7 +44,7 @@ public class ServerDisplayCubeGizmo extends AbstractCubeGizmo implements ServerE
     private BlockDisplay entity;
     private ServerEntity serverEntity;
 
-    protected ServerDisplayCubeGizmo(ServerPlayer viewer) {
+    public ServerDisplayCubeGizmo(ServerPlayer viewer) {
         this.viewer = viewer;
     }
 
@@ -87,14 +87,14 @@ public class ServerDisplayCubeGizmo extends AbstractCubeGizmo implements ServerE
         entity = null;
     }
 
-    private void configure(@NotNull BlockDisplay entity) {
+    protected void configure(@NotNull BlockDisplay entity) {
         entity.setBrightnessOverride(Brightness.FULL_BRIGHT);
         entity.setGlowingTag(true);
         entity.setTransformationInterpolationDuration(3);
         entity.setPosRotInterpolationDuration(3);
     }
 
-    private void update(@NotNull BlockDisplay entity) {
+    protected void update(@NotNull BlockDisplay entity) {
         Vector3dc position = getPosition();
         GizmoColor color = getColor();
         entity.setPos(position.x(), position.y(), position.z());

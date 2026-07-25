@@ -21,7 +21,7 @@ dependencies {
     jarJar(libs.gizmo.common)
 }
 
-val generateModMetadata by tasks.registering(ProcessResources::class) {
+val generateModMetadata = tasks.register<ProcessResources>("generateModMetadata") {
     val props = mapOf(
         "version" to version,
         "neoforgeVersion" to libs.versions.neoforge.get(),

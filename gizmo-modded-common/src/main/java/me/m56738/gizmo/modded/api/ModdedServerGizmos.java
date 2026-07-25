@@ -1,25 +1,17 @@
 package me.m56738.gizmo.modded.api;
 
 import me.m56738.gizmo.api.GizmoFactory;
-import me.m56738.gizmo.modded.server.ServerGizmoFactory;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Closeable;
 
-public final class ModdedServerGizmos implements Closeable {
-    private ModdedServerGizmos() {
-    }
+public interface ModdedServerGizmos extends Closeable {
+    @NotNull GizmoFactory player(@NotNull ServerPlayer player);
 
-    public static ModdedServerGizmos create() {
-        return new ModdedServerGizmos();
-    }
-
-    public @NotNull GizmoFactory player(@NotNull ServerPlayer player) {
-        return new ServerGizmoFactory(player);
-    }
+    boolean isGizmo(Entity entity);
 
     @Override
-    public void close() {
-    }
+    void close();
 }
