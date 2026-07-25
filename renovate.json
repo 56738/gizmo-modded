@@ -1,0 +1,27 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":disableDependencyDashboard"
+  ],
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "ignoreDeps": [
+    "com.mojang:minecraft"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["net.fabricmc.fabric-api:fabric-api"],
+      "versionCompatibility": "^(?<version>.*)\\+(?<compatibility>.*)$"
+    },
+    {
+      "matchPackageNames": ["net.neoforged:neoforge"],
+      "versionCompatibility": "^(?<compatibility>.*)\\.(?<version>.*)$"
+    },
+    {
+      "matchPackageNames": ["net.neoforged:neoform"],
+      "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$"
+    }
+  ]
+}
