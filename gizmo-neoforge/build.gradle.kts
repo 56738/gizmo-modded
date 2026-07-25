@@ -16,8 +16,6 @@ neoForge {
 
 dependencies {
     implementation(project(":gizmo-modded-common"))
-    implementation(libs.neoforge)
-
     accessTransformers(project(":gizmo-modded-common"))
     jarJar(project(":gizmo-modded-common"))
     jarJar(libs.gizmo.common)

@@ -13,7 +13,12 @@ fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fab
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
 gizmo-common = { module = "me.m56738.gizmo:gizmo-common", version.ref = "gizmo" }
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+
+# Needed to make Renovate detect the version
+#noinspection UnusedVersionCatalogEntry
 neoforge = { module = "net.neoforged:neoforge", version.ref = "neoforge" }
+#noinspection UnusedVersionCatalogEntry
+neoform = { module = "net.neoforged:neoform", version.ref = "neoform" }
 
 [plugins]
 fabric-loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric-loom" }

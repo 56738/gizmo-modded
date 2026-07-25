@@ -9,5 +9,19 @@
   },
   "ignoreDeps": [
     "com.mojang:minecraft"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["net.fabricmc.fabric-api:fabric-api"],
+      "versionCompatibility": "^(?<version>.*)\\+(?<compatibility>.*)$"
+    },
+    {
+      "matchPackageNames": ["net.neoforged:neoforge"],
+      "versionCompatibility": "^(?<compatibility>.*)\\.(?<version>.*)$"
+    },
+    {
+      "matchPackageNames": ["net.neoforged:neoform"],
+      "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$"
+    }
   ]
 }
