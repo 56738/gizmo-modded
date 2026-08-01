@@ -1,5 +1,5 @@
 [versions]
-fabric-api = "0.155.2+26.2"
+fabric-api = "0.156.0+26.2"
 fabric-loader = "0.19.3"
 fabric-loom = "1.17-SNAPSHOT"
 gizmo = "1.1.0"
