@@ -2,7 +2,7 @@
 fabric-api = "0.155.2+26.2"
 fabric-loader = "0.19.3"
 fabric-loom = "1.17-SNAPSHOT"
-gizmo = "1.1.0"
+gizmo = "1.1.1"
 minecraft = "26.2"
 moddev = "2.0.142"
 neoforge = "26.2.0.32-beta"
