@@ -1,6 +1,6 @@
 plugins {
     id("gizmo-modded.base")
-    alias(libs.plugins.fabric.loom)
+    id("net.fabricmc.fabric-loom")
 }
 
 dependencies {
@@ -9,7 +9,7 @@ dependencies {
     implementation(project(":gizmo-modded-common"))
 
     implementation(libs.fabric.loader)
-    implementation(libs.fabric.api)
+    implementation(fabricApiLibs.data.attachment.api.v1)
 
     include(project(":gizmo-modded-common"))
     include(libs.gizmo.common)

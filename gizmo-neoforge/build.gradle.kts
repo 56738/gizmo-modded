@@ -1,6 +1,6 @@
 plugins {
     id("gizmo-modded.base")
-    alias(libs.plugins.moddev)
+    id("net.neoforged.moddev")
 }
 
 neoForge {

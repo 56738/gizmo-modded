@@ -32,7 +32,7 @@
     "fabricloader": ">=0.19.3",
     "minecraft": "~26.3",
     "java": ">=25",
-    "fabric-api": "*"
+    "fabric-data-attachment-api-v1": "*"
   },
   "custom": {
     "modmenu": {

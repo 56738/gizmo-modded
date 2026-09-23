@@ -3,13 +3,6 @@ plugins {
     id("maven-publish")
 }
 
-repositories {
-    maven("https://repo.56738.me")
-    maven("https://maven.fabricmc.net")
-    maven("https://maven.neoforged.net/releases/")
-    mavenCentral()
-}
-
 tasks {
     javadoc {
         (options as StandardJavadocDocletOptions).addStringOption("Xdoclint:all,-missing", "-quiet")
