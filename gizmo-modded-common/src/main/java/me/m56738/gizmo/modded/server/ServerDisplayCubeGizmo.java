@@ -13,6 +13,7 @@ import net.minecraft.world.entity.Display.BillboardConstraints;
 import net.minecraft.world.entity.Display.BlockDisplay;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.UpdateInterval;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.ApiStatus;
@@ -58,7 +59,8 @@ public class ServerDisplayCubeGizmo extends AbstractCubeGizmo implements ServerE
         entity = new BlockDisplay(type, level);
         configure(entity);
         update(entity);
-        serverEntity = new ServerEntity(level, entity, type.updateInterval(), type.trackDeltas(), this);
+        UpdateInterval updateInterval = type.hasUpdateInterval() ? UpdateInterval.periodic(type.updateInterval()) : UpdateInterval.NEVER;
+        serverEntity = new ServerEntity(level, entity, updateInterval, type.trackDeltas(), this);
         serverEntity.addPairing(viewer);
         checkAndClearDirty();
     }
