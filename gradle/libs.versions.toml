@@ -4,6 +4,7 @@ gizmo = "1.1.1"
 minecraft = "26.3"
 neoforge = "26.3.0.16-beta"
 neoform = "26.3-1"
+resource-factory = "1.4.0"
 
 [libraries]
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
@@ -15,3 +16,7 @@ minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 neoforge = { module = "net.neoforged:neoforge", version.ref = "neoforge" }
 #noinspection UnusedVersionCatalogEntry
 neoform = { module = "net.neoforged:neoform", version.ref = "neoform" }
+
+[plugins]
+resource-factory-fabric-convention = { id = "xyz.jpenilla.resource-factory-fabric-convention", version.ref = "resource-factory" }
+resource-factory-neoforge-convention = { id = "xyz.jpenilla.resource-factory-neoforge-convention", version.ref = "resource-factory" }

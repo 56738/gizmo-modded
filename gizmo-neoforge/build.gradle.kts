@@ -1,6 +1,7 @@
 plugins {
     id("gizmo-modded.base")
     id("net.neoforged.moddev")
+    alias(libs.plugins.resource.factory.neoforge.convention)
 }
 
 neoForge {
@@ -21,26 +22,6 @@ dependencies {
     jarJar(libs.gizmo.common)
 }
 
-val generateModMetadata = tasks.register<ProcessResources>("generateModMetadata") {
-    val props = mapOf(
-        "version" to version,
-        "neoforgeVersion" to libs.versions.neoforge.get(),
-        "minecraftVersion" to libs.versions.minecraft.get()
-    )
-    inputs.properties(props)
-    expand(props)
-    from(layout.projectDirectory.dir("src/main/templates"))
-    into(layout.buildDirectory.dir("generated/sources/modMetadata"))
-}
-
-sourceSets {
-    main {
-        resources {
-            srcDir(generateModMetadata)
-        }
-    }
-}
-
 tasks {
     jar {
         manifest {
@@ -52,4 +33,18 @@ tasks {
     }
 }
 
-neoForge.ideSyncTask(generateModMetadata)
+neoForgeModsToml {
+    license = "GNU GPLv3"
+    issueTrackerUrl = "https://github.com/56738/gizmo-modded/issues"
+    mod("gizmo") {
+        version = project.version.toString()
+        displayName = "Gizmo"
+        displayUrl = "https://github.com/56738/gizmo-modded"
+        authors = "56738"
+        description = "Gizmo utility library"
+        dependencies {
+            required("neoforge", "[${libs.versions.neoforge.get()},)")
+            required("minecraft", versionRange = libs.versions.minecraft.get())
+        }
+    }
+}
