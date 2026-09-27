@@ -21,7 +21,7 @@ dependencies {
 
 loom {
     splitEnvironmentSourceSets()
-    accessWidenerPath = file("src/main/resources/gizmo.accesswidener")
+    accessWidenerPath = file("src/main/resources/gizmo.classtweaker")
     mods {
         register("gizmo") {
             sourceSet("main")
@@ -34,6 +34,7 @@ fabricModJson {
     id = "gizmo"
     name = "Gizmo"
     description = "Gizmo utility library"
+    accessWidener = "gizmo.classtweaker"
     author("56738")
     mainEntrypoint("me.m56738.gizmo.fabric.GizmoMod")
     clientEntrypoint("me.m56738.gizmo.fabric.GizmoModClient")
