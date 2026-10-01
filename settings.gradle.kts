@@ -10,7 +10,7 @@ pluginManagement {
 }
 
 plugins {
-    id("net.fabricmc.fabric-loom-repositories") version "1.18-SNAPSHOT"
+    id("net.fabricmc.fabric-loom-repositories") version "1.18.2"
     id("net.neoforged.moddev.repositories") version "2.0.147"
 }
 
