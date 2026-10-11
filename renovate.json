@@ -17,7 +17,8 @@
   "packageRules": [
     {
       "matchDepNames": [
-        "net.fabricmc.fabric-loom"
+        "net.fabricmc.fabric-loom",
+        "net.fabricmc.fabric-loom-repositories"
       ],
       "allowedVersions": "/-SNAPSHOT$/"
     }
