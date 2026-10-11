@@ -13,5 +13,13 @@
     "net.fabricmc:fabric-loader",
     "net.neoforged:neoforge",
     "net.neoforged:neoform"
+  ],
+  "packageRules": [
+    {
+      "matchDepNames": [
+        "net.fabricmc.fabric-loom"
+      ],
+      "allowedVersions": "/-SNAPSHOT$/"
+    }
   ]
 }
