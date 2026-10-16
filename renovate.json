@@ -21,6 +21,12 @@
         "net.fabricmc.fabric-loom-repositories"
       ],
       "allowedVersions": "/-SNAPSHOT$/"
+    },
+    {
+      "matchDatasources": [
+        "java-version"
+      ],
+      "enabled": false
     }
   ]
 }
