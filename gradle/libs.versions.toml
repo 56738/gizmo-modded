@@ -4,7 +4,7 @@ gizmo = "1.1.1"
 minecraft = "26.3"
 neoforge = "26.3.0.16-beta"
 neoform = "26.3-1"
-resource-factory = "1.4.0"
+resource-factory = "1.5.0"
 
 [libraries]
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
