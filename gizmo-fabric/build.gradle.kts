@@ -37,7 +37,6 @@ fabricModJson {
     accessWidener = "gizmo.classtweaker"
     author("56738")
     mainEntrypoint("me.m56738.gizmo.fabric.GizmoMod")
-    mixin("gizmo.mixins.json")
     license("GPL-3.0-or-later")
     contact {
         sources = "https://github.com/56738/gizmo-modded"
