@@ -1,5 +1,4 @@
-import org.spongepowered.configurate.objectmapping.ConfigSerializable
-import xyz.jpenilla.resourcefactory.fabric.Environment
+import xyz.jpenilla.resourcefactory.fabric.ModMenuBadge
 
 plugins {
     id("gizmo-modded.base")
@@ -45,17 +44,7 @@ fabricModJson {
     depends("java", ">=" + java.toolchain.languageVersion.get().asInt())
     depends("minecraft", "~" + libs.versions.minecraft.get())
     depends("fabric-data-attachment-api-v1", "*")
-    custom(
-        "modmenu", complexCustomValue(
-            ModMenu(
-                badges = listOf("library")
-            )
-        )
-    )
+    modMenu {
+        badge(ModMenuBadge.LIBRARY)
+    }
 }
-
-@ConfigSerializable
-data class ModMenu(
-    @get:Input
-    val badges: List<String>
-)
